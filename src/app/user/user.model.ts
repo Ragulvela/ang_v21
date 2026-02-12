@@ -1,7 +1,81 @@
 // src/app/users/user.model.ts
+
 export interface User {
-    id: number;
+  id: number;
+  firstName: string;
+  lastName: string;
+  maidenName: string;
+  age: number;
+  gender: string;
+  email: string;
+  phone: any;
+  username: string;
+  password: string;
+  birthDate: any;
+  image: any;
+  bloodGroup: string;
+  height: any;
+  weight: any;
+  eyeColor: string;
+
+  hair: {
+    color: string;
+    type: string;
+  };
+
+  ip: any;
+
+  address: {
+    address: any;
+    city: string;
+    state: string;
+    stateCode: string;
+    postalCode: any;
+    coordinates: {
+      lat: number;
+      lng: number;
+    };
+    country: string;
+  };
+
+  macAddress: string;
+  university: string;
+
+  bank: {
+    cardExpire: string;
+    cardNumber: string;
+    cardType: string;
+    currency: string;
+    iban: string;
+  };
+
+  company: {
+    department: string;
     name: string;
-    email: string;
-  }
-  
+    title: string;
+    address: {
+      address: string;
+      city: string;
+      state: string;
+      stateCode: string;
+      postalCode: string;
+      coordinates: {
+        lat: number;
+        lng: number;
+      };
+      country: string;
+    };
+  };
+
+  ein: string;
+  ssn: string;
+  userAgent: string;
+
+  crypto: {
+    coin: string;
+    wallet: string;
+    network: string;
+  };
+
+  role: string;
+}

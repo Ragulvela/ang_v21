@@ -1,0 +1,38 @@
+.card-grid {
+    display: grid;
+    grid-template-columns:auto;
+    grid-row:auto;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  /* Structure */
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .Heading{
+    font-family:'Times New Roman';
+    font-size: larger;
+    font-weight: bolder;
+    align-self: center;
+  }
+  

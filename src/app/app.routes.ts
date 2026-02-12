@@ -6,8 +6,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./user/user.component').then(c => c.UserComponent)
   },
-  {path :'',   loadComponent: () =>
-  import('./user/user.component').then(c => c.UserComponent)
+  {path :'', redirectTo:'user', pathMatch: 'full'
 },
 
 ];

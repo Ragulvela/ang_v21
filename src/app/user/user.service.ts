@@ -6,7 +6,7 @@ import { User } from './user.model';
 @Injectable({ providedIn: 'root' })
 export class UsersService {
 
-  private readonly apiUrl = '/api/users';
+  private readonly apiUrl = 'https://dummyjson.com/users';
 
   // 🔹 STATE (private)
   private _users = signal<User[]>([]);
@@ -26,10 +26,10 @@ export class UsersService {
     this._error.set(null);
 
     try {
-      const users = await firstValueFrom(
-        this.http.get<User[]>(this.apiUrl)
+      const users:any = await firstValueFrom(
+        this.http.get(this.apiUrl)
       );
-      this._users.set(users);
+      this._users.set(users['users']);
     } catch (e) {
       this._error.set('Failed to load users');
     } finally {
